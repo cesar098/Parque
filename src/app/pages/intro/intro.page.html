@@ -1,0 +1,53 @@
+
+<ion-content>
+
+  <ion-slides #sliders pager>
+    <ion-slide>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button color="primary" (click)="dismiss()">Salir</ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end">
+          <ion-button color="primary" (click)="next()">Siguiente</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <div class="slide">
+        <img src="assets/img/logo1.png"/>
+        <h2>BIENVENIDO</h2>
+        <p> <b>esta es una app educativa</b> Para informar detalle, datos de Animal pertenecientes a Parque Urbano.</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button color="primary" (click)="next()">Siguiente</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img src="assets/logo/cardenal1.png"/>
+      <h2>Lista de Animal?<ion-icon name="search"></ion-icon></h2>
+      <p><b>Menu Inferior </b> Permite seleccionar y burcar por Su Nombre Comun y Categoria de animales para conocer todos sus detalles.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button color="primary" (click)="next()">Siguiente</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img style="margin: 30px 0px 9px;"src="assets/logo/rana4.png"/>
+      <h2>Lector QR Code? <ion-icon name="scan-circle-outline"></ion-icon></h2>
+      <p><b>Menu interior</b> Activa la Camara del Telefono para leer el codigo impreso, para ver detalles de manera mas rapida .</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/logo/zarigueya2.png"/>
+      <h2>Map y Localizacion ?<ion-icon name="navigate"></ion-icon></h2>
+      <p><b>Permite Location</b> permite usar su Localizacion que mientras hace su recorrido le envia una alerta si se acerca a un animal</p>
+      <ion-button (click)="dismiss()" fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+</ion-slides>
+
+</ion-content>

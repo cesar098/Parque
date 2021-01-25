@@ -1,0 +1,60 @@
+
+<ion-content [fullscreen]="true" >
+  <div id="container" hidden>
+    <ion-button expand="full" color="danger"  [routerLink]="[ '/lista']"> animales</ion-button>
+    <ion-button expand="full" color="primary" (click)="modalQR()" > QR Lector</ion-button>
+    <ion-button expand="full" color="primary" (click)="modalMap()" > MAP</ion-button>
+  </div>
+
+  <div style="background-color: black;">
+    <ion-grid class="griday">
+      <ion-row class="ion-no-padding">
+        <ion-col class="ion-no-padding">
+          <img src="assets/logo/logo1.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4"><img src="assets/logo/jaguar2.png"></ion-col>
+        <ion-col size="4"><img src="assets/logo/serpiente2.png"></ion-col>
+        <ion-col size="4"><img src="assets/logo/zarigueya2.png"></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4"><img src="assets/logo/rana2-0.png"></ion-col>
+        <ion-col size="4"></ion-col>
+        <ion-col size="4"><img src="assets/logo/zarigueya5.png"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+<ion-tabs>
+  <ion-icon name="scan-circle-outline" class="icon-button inner-center-btn" (click)="modalQR()"></ion-icon>
+
+  <ion-tab-bar slot="bottom" class="bottom-tab-bar" style="--color: #000;">
+
+    <ion-tab-button tab="home">
+      <ion-icon mode="md" name="home"></ion-icon>
+      <ion-label>Principal</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="lista" class="inner-left-btn">
+      <ion-icon name="search"></ion-icon>
+      <ion-label>Animales</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button class="button-center" (click)="modalQR()">
+      <div></div>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="modalMap()" class="inner-right-btn">
+      <ion-icon name="navigate"></ion-icon>
+      <ion-label>mapa</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="modalinfo()">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>Settings</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
